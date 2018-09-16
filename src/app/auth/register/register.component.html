@@ -4,30 +4,41 @@
             <div class="col-lg-4 mx-auto">
                 <h2 class="text-center mb-4">Registro</h2>
                 <div class="auto-form-wrapper">
-                    <form action="#">
+                    <form #forma="ngForm" (ngSubmit)="onSubmit(forma.value)">
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Correo">
+                                <input type="email" #email class="form-control" name="email" ngModel placeholder="Correo">
                                 <div class="input-group-append">
                                     <span class="input-group-text">
-                      <i class="fa fa-check-circle"></i>
-                    </span>
+                                        <i class="fa fa-check-circle"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="text" class="form-control" name="nombre" ngModel placeholder="Nombre">
                                 <div class="input-group-append">
                                     <span class="input-group-text">
-                      <i class="fa fa-check-circle"></i>
-                    </span>
+                                        <i class="fa fa-check-circle"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="password" class="form-control" name="password" ngModel placeholder="Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-check-circle"></i>
+                                     
+                                </span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-primary submit-btn btn-block">Crear cuenta</button>
+                            <button [disabled]="!forma.valid" class="btn btn-primary submit-btn btn-block">Crear cuenta</button>
                         </div>
                         <div class="text-block text-center my-3">
                             <span class="text-small font-weight-semibold">ya tienes una cuenta?</span>
