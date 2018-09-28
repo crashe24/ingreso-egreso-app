@@ -9,7 +9,7 @@
                     </div>
 
                     <div class="text-wrapper">
-                        <p class="profile-name">Cristobal Colón</p>
+                        <p class="profile-name">{{nombre}}</p>
                         <div>
                             <small class="designation text-muted">Gerente</small>
                         </div>
@@ -41,7 +41,7 @@
         </li>
 
         <li class="nav-item cursorPunto">
-            <a class="nav-link cursor" (click)="_authService.logout()">
+            <a class="nav-link cursor" (click)="logout()">
                 <i class="menu-icon fa fa-sign-out-alt"></i>
                 <span class="menu-title">Cerrar sesión</span>
             </a>
