@@ -5,7 +5,7 @@ import * as fromReducer from '../app/shared/reducers/ui.reducers';
 // tengo un nuevo reducer
 import * as fromAuth from '../app/auth/reducer/auth.reducers';
 // importar ingresoEgresoReducer
-import * as fromIngEgrReducer from './ingreso-egreso/reducer/ingreso-egreso.reducer';
+// import * as fromIngEgrReducer from './ingreso-egreso/reducer/ingreso-egreso.reducer';
 
 import { ActionReducerMap } from '@ngrx/store';
 
@@ -14,7 +14,7 @@ import { ActionReducerMap } from '@ngrx/store';
 export interface AppState {
     uiState: fromReducer.State;
     authState: fromAuth.AuthState;
-    ingEgreState: fromIngEgrReducer.IngresoEgresoState;
+    // ingEgreState: fromIngEgrReducer.IngresoEgresoState;
 }
 
 // configuracion global de los reducers
@@ -22,6 +22,6 @@ export interface AppState {
 export const appReducer: ActionReducerMap<AppState> = {
     uiState: fromReducer.UIReducer,
     authState: fromAuth.AuthStateReducer,
-    ingEgreState: fromIngEgrReducer.IngresoEgresoReducer
+    // ingEgreState: fromIngEgrReducer.IngresoEgresoReducer
 };
 
